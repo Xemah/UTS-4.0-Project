@@ -30,7 +30,7 @@
 	{/if}
 	<span class={cn(
 		'flex items-center justify-center space-x-2',
-		loading && '[&_.lucide-icon]:!hidden',
+		loading && '[&_.lucide-icon]:!hidden [&>span]:!ml-0',
 		loading && size === 'icon' && '!m-0',
 	)}>
 		<slot />
