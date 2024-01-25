@@ -98,7 +98,7 @@
 		{/if}
 	</Card.Content>
 	<Card.Footer class="p-2">
-		<div class="grid sm:grid-flow-col w-full">
+		<div class="grid grid-cols-2 sm:grid-flow-col w-full [&>*:last-child:not(:nth-child(2n))]:col-span-2">
 			{#if $user}
 				<div>
 					<PostLikeButton bind:post={post} />
