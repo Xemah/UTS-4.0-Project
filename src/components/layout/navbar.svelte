@@ -5,7 +5,7 @@
 	import { toast } from 'svelte-sonner';
 	import { goto } from '$app/navigation';
 	import Container from '$components/layout/container.svelte';
-	import ProfileSearch from '$components/profile-search.svelte';
+	import ProfileSearch from '$components/profile/profile-search.svelte';
 	import { Button } from '$components/ui/button';
 	import * as DropdownMenu from '$components/ui/dropdown-menu';
 	import { user } from '$lib/stores';

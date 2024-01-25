@@ -3,11 +3,11 @@
 	import { Loader2Icon, SearchIcon } from 'lucide-svelte';
 	// import { getAvatarUrl } from '$lib/utils';
 	import { getS3Url } from '$lib/utils';
-	import * as Avatar from './ui/avatar';
-	import { Button } from './ui/button';
-	import * as DropdownMenu from './ui/dropdown-menu';
-	import { Input } from './ui/input';
-	import * as Tooltip from './ui/tooltip';
+	import * as Avatar from '../ui/avatar';
+	import { Button } from '../ui/button';
+	import * as DropdownMenu from '../ui/dropdown-menu';
+	import { Input } from '../ui/input';
+	import * as Tooltip from '../ui/tooltip';
 
 	let query = '';
 
@@ -68,7 +68,7 @@
 		<Input
 			type="search"
 			class="h-9 mb-3 py-1 items-center"
-			placeholder="Search player"
+			placeholder="Search user"
 			bind:value={query}
 		/>
 		{#if isLoading}
