@@ -16,7 +16,7 @@
 	const getProfile = async () => {
 		const response = await fetch('/api/profile');
 		const data = await response.json();
-		profile = data.profile;
+		profile = data;
 		isLoading = false;
 	};
 

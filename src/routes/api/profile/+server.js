@@ -31,7 +31,5 @@ export const GET = async ({ locals }) => {
 		},
 	});
 
-	return json({
-		profile,
-	});
+	return json(profile);
 };
