@@ -4,7 +4,7 @@
 	import PostAdd from '$components/post/post-add.svelte';
 	import PostsList from '$components/post/posts-list.svelte';
 	import ProfileHeader from '$components/profile/profile-header.svelte';
-	import { user } from '$lib/stores';
+	import { user, title } from '$lib/stores';
 
 	export let data;
 	let profile = data.profile;
@@ -12,6 +12,8 @@
 
 	$: profile = data.profile;
 	$: posts = data.posts;
+
+	title.set(`Profile: ${profile.name}`);
 
 	$: hasBlocked = profile.user.blocks.some(({ target }) => target.id === $user?.id);
 </script>

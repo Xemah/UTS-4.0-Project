@@ -5,6 +5,9 @@
 	import ProfileCard from '$components/profile/profile-card.svelte';
 	import ProfileRecommendationsList from '$components/profile/profile-recommendations-list.svelte';
 	import * as Card from '$components/ui/card';
+	import { title } from '$lib/stores';
+
+	title.set('Home');
 
 	export let data;
 	let posts = data.posts;

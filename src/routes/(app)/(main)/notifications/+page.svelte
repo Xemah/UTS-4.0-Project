@@ -2,7 +2,10 @@
 	import Time from 'svelte-time';
 	import Container from '$components/layout/container.svelte';
 	import Heading from '$components/layout/heading.svelte';
+	import { title } from '$lib/stores';
 	import { cn } from '$lib/utils';
+
+	title.set('Notifications');
 
 	export let data;
 	let notifications = data.notifications;

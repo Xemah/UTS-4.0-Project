@@ -12,7 +12,7 @@
 <svelte:head>
 	<title>
 		{$title !== '' ? $title + ' - ' : ''}
-		Project
+		UTS 4.0 Project
 	</title>
 </svelte:head>
 

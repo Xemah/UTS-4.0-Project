@@ -7,6 +7,9 @@
 	import * as Card from '$components/ui/card';
 	import { Input } from '$components/ui/input';
 	import { Label } from '$components/ui/label';
+	import { title } from '$lib/stores';
+
+	title.set('Sign In');
 
 	let isSubmitting = false;
 
