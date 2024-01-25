@@ -3,7 +3,7 @@ import sanitizeHtml from 'sanitize-html';
 import { cubicOut } from 'svelte/easing';
 import type { TransitionConfig } from 'svelte/transition';
 import { twMerge } from 'tailwind-merge';
-import { PUBLIC_S3_BUCKET, PUBLIC_S3_ENDPOINT } from '$env/static/public';
+import { PUBLIC_S3_URL } from '$env/static/public';
 
 export const cn = (...inputs: ClassValue[]): string => {
 	return twMerge(clsx(inputs));
@@ -64,7 +64,7 @@ export const flyAndScale = (
 };
 
 export const getS3Url = (folder: string, file: string) => {
-	return `${PUBLIC_S3_ENDPOINT}/${PUBLIC_S3_BUCKET}/${folder}/${file}`;
+	return `${PUBLIC_S3_URL}/${folder}/${file}`;
 };
 
 export const deepMerge = (a: any, b: any) => {

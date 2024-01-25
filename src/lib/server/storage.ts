@@ -2,11 +2,11 @@ import { randomBytes } from 'crypto';
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
 import type { User } from '@prisma/client';
 import { fileTypeFromBuffer, type FileTypeResult } from 'file-type';
-import { S3_ACCESS_KEY_ID, S3_FORCE_PATH_STYLE, S3_SECRET_ACCESS_KEY } from '$env/static/private';
-import { PUBLIC_S3_BUCKET, PUBLIC_S3_ENDPOINT, PUBLIC_S3_REGION } from '$env/static/public';
+import { S3_ACCESS_KEY_ID, S3_API_URL, S3_FORCE_PATH_STYLE, S3_SECRET_ACCESS_KEY } from '$env/static/private';
+import { PUBLIC_S3_BUCKET, PUBLIC_S3_REGION } from '$env/static/public';
 
 const s3Client = new S3Client({
-	endpoint: PUBLIC_S3_ENDPOINT,
+	endpoint: S3_API_URL,
 	region: PUBLIC_S3_REGION,
 	forcePathStyle: S3_FORCE_PATH_STYLE === 'true',
 	credentials: {
