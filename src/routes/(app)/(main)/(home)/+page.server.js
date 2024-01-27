@@ -79,7 +79,7 @@ export const load = async ({ locals }) => {
 		},
 	});
 
-	const recommendationIds = await prisma.$queryRaw`SELECT \`id\` FROM \`User\` WHERE \`id\` != ${locals.user.id} ORDER BY RAND() LIMIT 5`;
+	const recommendationIds = await prisma.$queryRaw`SELECT "id" FROM "User" WHERE "id" <> ${locals.user.id} ORDER BY random() LIMIT 5`;
 
 	const recommendations = await prisma.profile.findMany({
 		where: {

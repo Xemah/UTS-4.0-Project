@@ -33,7 +33,10 @@ export const actions = {
 
 		const account = await prisma.account.findFirst({
 			where: {
-				email: body.email,
+				email: {
+					equals: body.email,
+					mode: 'insensitive',
+				},
 			},
 		});
 

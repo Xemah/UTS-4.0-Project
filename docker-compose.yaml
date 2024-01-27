@@ -2,16 +2,15 @@ version: '3'
 name: 'uts-4-project'
 
 services:
-  mysql:
-    image: mysql:8.2
+  postgres:
+    image: postgres:16.1
     environment:
-      MYSQL_DATABASE: project
-      MYSQL_ALLOW_EMPTY_PASSWORD: true
-    command: 'mysqld --max-connections=1000'
+      POSTGRES_DB: project
+      POSTGRES_PASSWORD: postgres
     ports:
-      - "3306:3306"
+      - "5432:5432"
     volumes:
-      - ./.docker/mysql:/var/lib/mysql
+      - ./.docker/postgres:/var/lib/postgresql/data
 
   minio:
     image: minio/minio

@@ -12,6 +12,7 @@ export const GET = async ({ url }) => {
 		where: {
 			name: {
 				contains: query,
+				mode: 'insensitive',
 			},
 		},
 		include: {
